@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="game.css" >
+</head>
+<body>
+    <form method="post" action="/result">
+
+    <h1>
+        What's your choice?
+    </h1>
+        <div id="content">
+            <input type="hidden" name="player1Name" value="<%= locals.player1Name %>">
+            <input type="hidden" name="player2Name" value="<%= locals.player2Name %>">
+            <label>
+                    <%= locals.player1Name %>:
+                    <select name="player1Choice">
+                        <option value="rock">Rock</option>
+                        <option value="paper">Paper</option>
+                        <option value="scissors">Scissors</option>
+                    </select>
+            </label>
+
+            <label>
+                <%= locals.player2Name %>:
+                    <select name="player2Choice">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select>
+            </label>
+            <button type="submit">Play!</button>
+        </div>
+    </form>
+</body>
+</html>

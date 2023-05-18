@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="result.css">
+</head>
+
+<body>
+    <div id="content">   
+            <P>Your Results:</P>
+               <% if (winner==="tie" ) { %>
+
+            <h1>It's a tie!</h1>
+               <% } else { %>
+            <h1>
+                <%= winner %> wins!
+            </h1>
+            
+            <% } %>
+                <p>
+                <%= player1Name %>: <%= player1Choice %>
+                </p>
+                                  vs
+                <p>
+                <%= player2Name %>: <%= player2Choice %>
+                </p>
+        <form action="/" method="get">
+            <input type="submit" value="Next Turn">
+        </form>
+        
+    </div>
+</body>
+
+</html>
